@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ssr:
+    container_name: ssr
+    image: teddysun/shadowsocks-r
+    restart: always
+    ports:
+      - 9060:9000/tcp
+      - 9060:9000/udp
+    volumes:
+      - ./:/etc/shadowsocks-r
